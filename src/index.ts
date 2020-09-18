@@ -22,9 +22,7 @@ Promise.all([
 
   layer.markers = Array.from({ length: 400 }).map(() => {
     let node = document.createElement("div");
-    node.style.width = "5px";
-    node.style.height = "5px";
-    node.style.background = "red";
+    node.className = "marker";
 
     return {
       point: new Point({
