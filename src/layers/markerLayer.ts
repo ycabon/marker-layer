@@ -35,6 +35,7 @@ async function _createLayerClass(): Promise<Constructor<MarkerLayer>> {
         y = Math.round(y);
 
         marker.node.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        marker.node.style.position = `absolute`;
         if (!marker.node.parentElement) {
           this.el.appendChild(marker.node);
         }

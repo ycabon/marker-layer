@@ -19,15 +19,22 @@ Promise.all([
 
   await view.when();
 
-  let node = document.createElement("div");
-  node.style.width = "20px";
-  node.style.height = "20px";
-  node.style.background = "red";
 
-  layer.markers = [{
-    point: new Point({ longitude: -100, latitude: 40, spatialReference: view.spatialReference }),
-    node
-  }];
+  layer.markers = Array.from({ length: 400 }).map(() => {
+    let node = document.createElement("div");
+    node.style.width = "5px";
+    node.style.height = "5px";
+    node.style.background = "red";
+
+    return {
+      point: new Point({
+        longitude: Math.random() * 360 - 180,
+        latitude: Math.random() * 180 - 90,
+        spatialReference: view.spatialReference
+      }),
+      node
+    }
+  });
 
   (window as any).view = view;
 })
