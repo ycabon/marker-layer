@@ -1,0 +1,21 @@
+{
+  "name": "marker-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esri-loader": "^2.15.0"
+  },
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.16.0",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
